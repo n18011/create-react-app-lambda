@@ -7,7 +7,7 @@ const client = challonge.createClient({
 })
 
 export async function handler (event, context) {
-  return client.tournaments.show({
+  await client.tournaments.show({
     id: 'n18011test',
     callback: (err, data) => {
       try {
