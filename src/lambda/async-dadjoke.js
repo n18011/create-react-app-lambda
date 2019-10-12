@@ -4,7 +4,7 @@
 import axios from 'axios'
 export async function handler (event, context) {
   try {
-    const response = await axios.get('https://n18011:THQwE1NobDxeWTRbAb8ACEtrUV4jDse7C6N7PwvU@api.challonge.com/v1/tournaments.json', { headers: { Accept: 'application/json' } })
+    const response = await axios.get('https://api.challonge.com/v1/tournaments.json', { headers: { Accept: 'application/json', api_key: 'THQwE1NobDxeWTRbAb8ACEtrUV4jDse7C6N7PwvU' } })
     const data = response.data
     return {
       statusCode: 200,
