@@ -11,10 +11,11 @@ export async function handler (event, context) {
     id: 'n18011test',
     callback: (err, data) => {
       console.log(data)
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ msg: data })
-      }
+      return data
     }
   })
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ msg: res })
+  }
 }
