@@ -18,6 +18,7 @@ class LambdaDemo extends Component {
   }
 
   render() {
+    console.log(msg)
     const { loading, msg } = this.state
 
     return (
@@ -25,7 +26,6 @@ class LambdaDemo extends Component {
         <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
         <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
         <br />
-        <span>{msg}</span>
         <br />
         <h2>hello!</h2>
       </p>
