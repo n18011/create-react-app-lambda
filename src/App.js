@@ -19,7 +19,7 @@ class LambdaDemo extends Component {
         if (err) {
           return 
         } 
-        this.setState({ loading: false, msg: res.text })})
+        this.setState({ loading: false, msg: res.text[0] })})
   }
 
   render() {
