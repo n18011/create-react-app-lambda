@@ -18,5 +18,5 @@ export async function handler (event, context) {
   }
   return {
     statusCode: 200,
-    body : {msg: data()}
+    body : JSON.stringify({msg: data()})
 }
