@@ -17,6 +17,6 @@ export async function handler (event, context) {
   })
   }
   return {
-    status: 200,
+    statusCode: 200,
     body : {msg: data()}
 }
