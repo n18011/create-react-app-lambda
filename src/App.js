@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
+import request from 'superagent'
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -12,8 +13,9 @@ class LambdaDemo extends Component {
     e.preventDefault()
 
     this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(res => this.setState({ loading: false, msg: res }))
+    request.get("/.netlify/functions/" + api)
+      .accept('application/json')
+      .end(res => this.setState({ loading: false, msg: res.body }))
   }
 
   render() {
