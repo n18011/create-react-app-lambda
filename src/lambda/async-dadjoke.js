@@ -13,7 +13,7 @@ export async function handler (event, context) {
     const data = response.data
     return {
       statusCode: 200,
-      body: data
+      body: JSON.stringify(data)
     }
   } catch (err) {
     console.log(err) // output to netlify function log
