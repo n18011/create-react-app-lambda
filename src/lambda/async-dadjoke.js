@@ -20,7 +20,7 @@ export async function handler (event, context, callback) {
   const data = () => {
     request.get('https://n18011:THQwE1NobDxeWTRbAb8ACEtrUV4jDse7C6N7PwvU@api.challonge.com/v1/tournaments.json')
       .end((err, res) => {
-        console.log(res)
+        return res
       })
   }
   callback(null, {
