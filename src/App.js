@@ -14,9 +14,14 @@ class LambdaDemo extends Component {
 
     this.setState({ loading: true })
 
-     fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
+
+    request.get("/.netlify/functions/" + api)
+      .accept('application/json')
+      .end((err, res) => {
+        if (err) {
+          return
+        }
+        this.setState({ loading: false, msg: res.msg })})
   }
 
   render() {
