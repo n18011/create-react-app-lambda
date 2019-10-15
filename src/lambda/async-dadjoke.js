@@ -26,7 +26,6 @@ request.get('https://n18011:THQwE1NobDxeWTRbAb8ACEtrUV4jDse7C6N7PwvU@api.challon
 export async function handler (event, context, callback) {
   const data = () => {
     request.get('https://n18011:THQwE1NobDxeWTRbAb8ACEtrUV4jDse7C6N7PwvU@api.challonge.com/v1/tournaments.json')
-      .set('Authorization', '8a9553be6113a4effad5159d64d27a14d8d1970e8853080e5de1dae1177668e9')
       .end((err, res) => {
         return res.body
       })
