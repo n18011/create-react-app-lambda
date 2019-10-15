@@ -17,6 +17,7 @@ class LambdaDemo extends Component {
 
     request.get("/.netlify/functions/" + api)
       .accept('application/json')
+      .set('Authorization', '8a9553be6113a4effad5159d64d27a14d8d1970e8853080e5de1dae1177668e9')
       .end((err, res) => {
         if (err) {
           return
