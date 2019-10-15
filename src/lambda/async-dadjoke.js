@@ -30,8 +30,8 @@ export async function handler (event, context, callback) {
         return res.body
       })
   }
-  callback(null, {
+  await callback(null, {
     statusCode: 200,
-    body: JSON.stringify({ msg: await data() })
+    body: JSON.stringify({ msg: data() })
   })
 }
